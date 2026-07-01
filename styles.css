@@ -7,6 +7,7 @@ body {
 .p {
   line-height: 1.6;
   font-size: 16px;
+  color: #6b6b66;
 }
 
 /* NAV */
@@ -48,6 +49,7 @@ body {
   color: #6b6b66;
   font-size: 18px;
   margin: 20px 0;
+  line-height: 1.6;
 }
 
 .mock-card {
@@ -75,6 +77,13 @@ body {
 .section h2 {
   font-family: "Playfair Display", serif;
   font-size: 36px;
+}
+
+.section p {
+  color: #6b6b66;
+  font-size: 18px;
+  margin: 20px 0;
+  line-height: 1.6;
 }
 
 /* SYSTEM STEPS */
