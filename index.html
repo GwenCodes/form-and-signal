@@ -135,7 +135,7 @@
     <!-- =========================
          AUDIENCE SECTION
     ========================== -->
-    <section class="max-w-7xl mx-auto px-6 py-24">
+    <section class="max-w-7xl mx-auto px-6 py-24 bg">
       <div class="text-center max-w-3xl mx-auto">
         <p class="uppercase tracking-wide text-sm text-gray-500">
           Who this is for
@@ -226,17 +226,24 @@
                 Brand & Revenue Strategy Session (90 min)
               </h4>
               <ul class="list-disc ml-5 mt-2 space-y-1">
-                <li>Define highest-paying buyer</li>
-                <li>Identify most profitable project type</li>
-                <li>Clarify positioning (luxury, speed, craft, etc.)</li>
+                <li>Identify your highest-value buyer</li>
+                <li>Pinpoint your most profitable service or project type</li>
+                <li>
+                  Define your market position (luxury, speed, craft, authority,
+                  etc.)
+                </li>
               </ul>
             </div>
 
             <div>
               <h4 class="font-semibold text-gray-900">Conversion Blueprint</h4>
               <ul class="list-disc ml-5 mt-2 space-y-1">
-                <li>Messaging structure (headline, CTA, story arcs)</li>
-                <li>Content strategy map (what drives leads)</li>
+                <li>
+                  High-impact messaging framework (headline, CTA, story arcs)
+                </li>
+                <li>
+                  Content strategy map showing exactly what drives inquiries
+                </li>
                 <li>Simple funnel: post → DM → inquiry flow</li>
               </ul>
             </div>
@@ -277,6 +284,233 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- =========================
+         Book a Call Section
+    ========================== -->
+    <!-- =========================
+      Book a Call Section
+========================== -->
+    <section class="max-w-7xl mx-auto px-6 py-24 bg-white">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl lg:text-4xl font-semibold mt-2 text-gray-900">
+          Book A 30-Minute Call
+        </h2>
+
+        <p class="mt-6 text-gray-600">
+          We'll review your project and determine the best way to turn it into a
+          lead-generating system.
+        </p>
+      </div>
+
+      <!-- Form Wrapper -->
+      <form
+        action="#"
+        method="POST"
+        class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mt-16 items-start"
+      >
+        <!-- STEP 1: Your Information -->
+        <div class="p-6 border rounded-xl bg-gray-50/50 shadow-sm space-y-4">
+          <div class="flex items-center space-x-2 mb-2">
+            <span
+              class="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-xs font-semibold text-white"
+              >1</span
+            >
+            <h3 class="font-semibold text-lg text-gray-900">
+              Your Information
+            </h3>
+          </div>
+
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              placeholder="John Doe"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <div>
+            <label for="website" class="block text-sm font-medium text-gray-700"
+              >Current Website
+              <span class="text-gray-400 font-normal">(Optional)</span></label
+            >
+            <input
+              type="url"
+              id="website"
+              name="website"
+              class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              placeholder="https://"
+            />
+          </div>
+        </div>
+
+        <!-- STEP 2: Pick a Date and Time -->
+        <div class="p-6 border rounded-xl bg-gray-50/50 shadow-sm space-y-4">
+          <div class="flex items-center space-x-2 mb-2">
+            <span
+              class="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-xs font-semibold text-white"
+              >2</span
+            >
+            <h3 class="font-semibold text-lg text-gray-900">
+              Pick a Date & Time
+            </h3>
+          </div>
+
+          <div>
+            <label for="date" class="block text-sm font-medium text-gray-700"
+              >Select Date</label
+            >
+            <input
+              type="date"
+              id="date"
+              name="date"
+              required
+              class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="time" class="block text-sm font-medium text-gray-700"
+              >Available Time Slots</label
+            >
+            <select
+              id="time"
+              name="time"
+              required
+              class="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 bg-white"
+            >
+              <option value="">Choose a time slot...</option>
+              <option value="09:00">9:00 AM — 9:30 AM EST</option>
+              <option value="10:30">10:30 AM — 11:00 AM EST</option>
+              <option value="13:00">1:00 PM — 1:30 PM EST</option>
+              <option value="15:30">3:30 PM — 4:00 PM EST</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- STEP 3: Pick a Service & Complete Bookings -->
+        <div class="p-6 border rounded-xl bg-gray-50/50 shadow-sm space-y-4">
+          <div class="flex items-center space-x-2 mb-2">
+            <span
+              class="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-xs font-semibold text-white"
+              >3</span
+            >
+            <h3 class="font-semibold text-lg text-gray-900">Pick a Service</h3>
+          </div>
+
+          <div class="space-y-3">
+            <!-- Starter Tier -->
+            <label
+              class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none hover:border-gray-400 checked:border-blue-500"
+            >
+              <input
+                type="radio"
+                name="tier"
+                value="starter"
+                class="sr-only peer"
+                checked
+              />
+              <div
+                class="flex flex-1 justify-between items-center peer-checked:border-blue-500"
+              >
+                <div>
+                  <p class="block text-sm font-medium text-gray-900">Starter</p>
+                  <p class="mt-1 text-xs text-gray-500">
+                    Perfect for initial setup
+                  </p>
+                </div>
+                <p class="text-sm font-semibold text-gray-900">$599</p>
+              </div>
+              <!-- Border effect border hack for peer styling -->
+              <span
+                class="absolute -inset-px rounded-lg border-2 border-transparent peer-checked:border-blue-600 pointer-events-none"
+                aria-hidden="true"
+              ></span>
+            </label>
+
+            <!-- Growth Tier -->
+            <label
+              class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none hover:border-gray-400"
+            >
+              <input
+                type="radio"
+                name="tier"
+                value="growth"
+                class="sr-only peer"
+              />
+              <div class="flex flex-1 justify-between items-center">
+                <div>
+                  <p class="block text-sm font-medium text-gray-900">Growth</p>
+                  <p class="mt-1 text-xs text-gray-500">
+                    Scalable lead generation
+                  </p>
+                </div>
+                <p class="text-sm font-semibold text-gray-900">$1.5k - $3k</p>
+              </div>
+              <span
+                class="absolute -inset-px rounded-lg border-2 border-transparent peer-checked:border-blue-600 pointer-events-none"
+                aria-hidden="true"
+              ></span>
+            </label>
+
+            <!-- Studio Tier -->
+            <label
+              class="relative flex cursor-pointer rounded-lg border bg-white p-4 shadow-sm focus:outline-none hover:border-gray-400"
+            >
+              <input
+                type="radio"
+                name="tier"
+                value="studio"
+                class="sr-only peer"
+              />
+              <div class="flex flex-1 justify-between items-center">
+                <div>
+                  <p class="block text-sm font-medium text-gray-900">Studio</p>
+                  <p class="mt-1 text-xs text-gray-500">
+                    Full ecosystem deployment
+                  </p>
+                </div>
+                <p class="text-sm font-semibold text-gray-900">$3,500</p>
+              </div>
+              <span
+                class="absolute -inset-px rounded-lg border-2 border-transparent peer-checked:border-blue-600 pointer-events-none"
+                aria-hidden="true"
+              ></span>
+            </label>
+          </div>
+
+          <!-- Action Button -->
+          <div class="pt-2">
+            <button
+              type="submit"
+              class="w-full rounded-lg bg-blue-600 px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors"
+            >
+              Confirm Strategy Session
+            </button>
+          </div>
+        </div>
+      </form>
     </section>
 
     <!-- =========================
