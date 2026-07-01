@@ -5,110 +5,323 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form & Signal — Project Systems</title>
 
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
-    <header class="nav">
-      <div class="logo">Form & Signal</div>
-      <button class="btn-primary">Start a Project</button>
+  <body class="bg-white text-gray-900">
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header
+      class="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-between"
+    >
+      <div class="logo text-lg font-semibold">Form & Signal</div>
+      <button class="nav-button px-4 py-2 text-sm rounded-md">
+        Start a Project
+      </button>
     </header>
 
-    <section class="hero">
-      <div class="hero-left">
-        <h1>Your projects, working for you</h1>
-        <p>
+    <!-- =========================
+     HERO SECTION (UPGRADED)
+========================= -->
+    <section
+      class="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-28 grid lg:grid-cols-2 gap-20 items-center"
+    >
+      <!-- LEFT -->
+      <div>
+        <h1 class="text-4xl lg:text-5xl font-semibold leading-tight">
+          Your projects, working for you
+        </h1>
+
+        <p class="mt-6 text-gray-600 text-lg leading-relaxed max-w-xl">
           We transform your best work into a complete marketing system: content,
           visuals, and a simple lead-generating page in 2 weeks.
         </p>
 
-        <button class="btn-primary">Start My Project</button>
+        <button class="btn-primary mt-8">Start My Project</button>
+
+        <!-- subtle credibility line -->
+        <p class="mt-6 text-sm text-gray-400">
+          Built for contractors, designers & architects who want consistent
+          leads.
+        </p>
       </div>
 
-      <div class="hero-right">
-        <img
-          src="/src/images/cell-phone.png"
-          alt="Project preview on phone"
-          class="mock-card"
-        />
+      <!-- RIGHT (VISUAL UPGRADE) -->
+      <div class="flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-md lg:max-w-lg">
+          <!-- soft glow background -->
+          <div
+            class="absolute inset-0 bg-gradient-to-tr from-gray-200 to-gray-100 rounded-2xl blur-2xl opacity-60 scale-110"
+          ></div>
+
+          <!-- image card -->
+          <div
+            class="relative bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden transform hover:scale-[1.02] transition duration-500"
+          >
+            <img
+              src="/src/images/cell-phone.png"
+              alt="Project preview on phone"
+              class="w-full h-auto"
+            />
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="strip">
-      <p>Built for the small medium home improvement industry.</p>
+    <!-- =========================
+         INDUSTRY STRIP
+    ========================== -->
+    <section class="py-6 text-center bg-gray-50">
+      <p class="text-gray-600">
+        Built for the small medium home improvement industry.
+      </p>
     </section>
 
-    <section class="section">
-      <h2>Your work is already good. It just isn't packaged.</h2>
-      <p>
+    <!-- =========================
+         PROBLEM SECTION
+    ========================== -->
+    <section class="max-w-4xl mx-auto px-6 py-24 text-center">
+      <h2 class="text-3xl lg:text-4xl font-semibold">
+        Your work is already good. It just isn't packaged.
+      </h2>
+
+      <p class="mt-6 text-gray-600 text-lg leading-relaxed">
         Most professionals rely on referrals because their work isn't structured
         into something clients can immediately understand and trust.
       </p>
     </section>
 
-    <section class="section system">
-      <h2>The Project System</h2>
+    <!-- =========================
+         HOW IT WORKS
+    ========================== -->
+    <section class="max-w-5xl mx-auto px-6 py-24">
+      <h2 class="text-3xl lg:text-4xl font-semibold text-center">
+        The Project System
+      </h2>
 
-      <div class="step">
-        <span>01</span>
-        <p>Send one completed project</p>
-      </div>
-
-      <div class="step">
-        <span>02</span>
-        <p>We build your visual + content system</p>
-      </div>
-
-      <div class="step">
-        <span>03</span>
-        <p>You receive a complete lead-ready asset pack</p>
-      </div>
-    </section>
-
-    <section class="section preview">
-      <h2>What your project becomes</h2>
-      <div class="grid-preview">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </section>
-
-    <section class="section pricing">
-      <h2>Investment</h2>
-
-      <div class="pricing-grid">
-        <div class="price">
-          <h3>Starter</h3>
-          <p>$599+</p>
+      <div class="grid md:grid-cols-3 gap-8 mt-14">
+        <div class="text-center p-6 border rounded-xl">
+          <span class="text-xl font-semibold">01</span>
+          <p class="mt-4 text-gray-600">Send one completed project</p>
         </div>
 
-        <div class="price featured">
-          <h3>Growth</h3>
-          <p>$1,500–$3,000</p>
+        <div class="text-center p-6 border rounded-xl">
+          <span class="text-xl font-semibold">02</span>
+          <p class="mt-4 text-gray-600">
+            We build your visual + content system
+          </p>
         </div>
 
-        <div class="price">
-          <h3>Studio</h3>
-          <p>$3,500+</p>
+        <div class="text-center p-6 border rounded-xl">
+          <span class="text-xl font-semibold">03</span>
+          <p class="mt-4 text-gray-600">
+            You receive a complete lead-ready asset pack
+          </p>
         </div>
       </div>
     </section>
 
-    <section class="cta">
-      <h2>Turn your best project into your next client.</h2>
-      <button class="btn-primary">Start Now</button>
+    <!-- =========================
+         AUDIENCE SECTION
+    ========================== -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+      <div class="text-center max-w-3xl mx-auto">
+        <p class="uppercase tracking-wide text-sm text-gray-500">
+          Who this is for
+        </p>
+
+        <h2 class="text-3xl lg:text-4xl font-semibold mt-2">
+          You build the projects.
+        </h2>
+        <h2 class="text-3xl lg:text-4xl font-semibold mt-3">
+          We'll build the buzz.
+        </h2>
+
+        <p class="mt-6 text-gray-600">
+          You already do exceptional work. We make sure the right people see it.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mt-16">
+        <div class="p-6 border rounded-xl">
+          <h3 class="font-semibold text-lg">
+            General Contractors & Remodelers
+          </h3>
+          <p class="mt-4 text-gray-600">
+            You finish a beautiful renovation, take a few photos, then move on
+            to the next job.
+          </p>
+        </div>
+
+        <div class="p-6 border rounded-xl">
+          <h3 class="font-semibold text-lg">Interior Designers</h3>
+          <p class="mt-4 text-gray-600">
+            Your portfolio is full of stunning spaces, but your social media
+            doesn't reflect the quality of your work.
+          </p>
+        </div>
+
+        <div class="p-6 border rounded-xl">
+          <h3 class="font-semibold text-lg">Architects & Design-Build Firms</h3>
+          <p class="mt-4 text-gray-600">
+            Your projects deserve more visibility than word-of-mouth alone.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <footer>
+    <!-- =========================
+     PRICING SECTION (UPDATED)
+========================== -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+      <h2 class="text-3xl lg:text-4xl font-semibold text-center">Investment</h2>
+
+      <div class="grid lg:grid-cols-3 gap-8 mt-16">
+        <!-- Starter -->
+        <details class="investment-card p-6 border rounded-xl">
+          <summary class="cursor-pointer flex justify-between items-center">
+            <h3 class="font-semibold text-lg">Starter</h3>
+            <p class="font-medium">$599</p>
+          </summary>
+
+          <div class="content mt-6 text-gray-600 space-y-4">
+            <div>
+              <h4 class="font-semibold text-gray-900">What You Get</h4>
+              <p>16-post content system based on one completed project.</p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-gray-900">Includes</h4>
+              <ul class="list-disc ml-5 mt-2 space-y-1">
+                <li>Project update posts</li>
+                <li>Feature material posts</li>
+                <li>Educational posts</li>
+                <li>Inspirational posts</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Growth (UPDATED — STRATEGY LAYER) -->
+        <details class="investment-card p-6 border rounded-xl bg-gray-50">
+          <summary class="cursor-pointer flex justify-between items-center">
+            <h3 class="font-semibold text-lg">Growth</h3>
+            <p class="font-medium">$1,500 - $3,000</p>
+          </summary>
+
+          <div class="content mt-6 text-gray-600 space-y-4">
+            <div>
+              <h4 class="font-semibold text-gray-900">
+                Brand & Revenue Strategy Session (90 min)
+              </h4>
+              <ul class="list-disc ml-5 mt-2 space-y-1">
+                <li>Define your highest-paying buyer</li>
+                <li>Identify your most profitable project type</li>
+                <li>
+                  Clarify positioning (luxury, speed, craftsmanship, etc.)
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-gray-900">
+                Conversion Blueprint (Document)
+              </h4>
+              <ul class="list-disc ml-5 mt-2 space-y-1">
+                <li>Messaging structure (headline, CTA, story arcs)</li>
+                <li>Content strategy map (what drives leads)</li>
+                <li>Simple funnel: post → DM → inquiry flow</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-gray-900">Visual Direction Kit</h4>
+              <ul class="list-disc ml-5 mt-2 space-y-1">
+                <li>Premium moodboard direction</li>
+                <li>Color + typography direction</li>
+                <li>Instagram feed style guide</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+
+        <!-- Studio -->
+        <details class="investment-card p-6 border rounded-xl">
+          <summary class="cursor-pointer flex justify-between items-center">
+            <h3 class="font-semibold text-lg">Studio</h3>
+            <p class="font-medium">$3,500+</p>
+          </summary>
+
+          <div class="content mt-6 text-gray-600 space-y-4">
+            <div>
+              <h4 class="font-semibold text-gray-900">What You Get</h4>
+              <p>
+                Full conversion system + brand storytelling execution for
+                ongoing growth.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-gray-900">Includes</h4>
+              <ul class="list-disc ml-5 mt-2 space-y-1">
+                <li>Full brand storytelling system</li>
+                <li>High-end positioning refinement</li>
+                <li>Content-to-lead funnel optimization</li>
+                <li>Priority execution support</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+    <!-- =========================
+         CTA
+    ========================== -->
+    <section class="py-28 px-6 text-center bg-gray-50">
+      <h2 class="text-3xl lg:text-4xl font-semibold">
+        Turn your best project into your next client.
+      </h2>
+
+      <button class="btn-primary mt-8">Start Now</button>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer class="py-10 text-center text-gray-500">
       <p>Form & Signal © 2026</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- =========================
+         HOVER-TO-OPEN SCRIPT
+    ========================== -->
+    <script>
+      const cards = document.querySelectorAll("details");
+
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          cards.forEach((c) => {
+            if (c !== card) c.removeAttribute("open");
+          });
+
+          card.setAttribute("open", true);
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.removeAttribute("open");
+        });
+      });
+    </script>
   </body>
 </html>
