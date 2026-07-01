@@ -1,4 +1,4 @@
-/* ========================================================= 
+/* =========================================================
    BASE / GLOBAL STYLES + MOTION SYSTEM
 ========================================================= */
 
@@ -87,7 +87,7 @@ h3 {
 }
 
 .nav-button:hover {
-  color: #01d324;
+  background: #01d324;
   transform: translateY(-2px);
 }
 
@@ -104,6 +104,7 @@ h3 {
   font-family: Inter, sans-serif;
   font-size: 16px;
   border-radius: 8px;
+
   transition:
     background 0.25s ease,
     transform 0.25s ease,
@@ -134,50 +135,7 @@ h3 {
   animation: sectionFade 0.8s ease-out both;
 }
 
-.hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 54px;
-  line-height: 1.1;
-}
-
 .hero p {
-  font-size: 18px;
-  margin: 20px 0;
-}
-
-.mock-card {
-  height: 420px;
-  width: 100%;
-  background: linear-gradient(135deg, #e7e5df, #d6d3cc);
-  border-radius: 16px;
-}
-
-/* =========================================================
-   STRIP SECTION
-========================================================= */
-
-.strip {
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid #e7e5df;
-  border-bottom: 1px solid #e7e5df;
-  font-size: 14px;
-  color: #6b6b66;
-}
-
-/* =========================================================
-   GENERAL SECTION SYSTEM
-========================================================= */
-
-.section {
-  padding: 120px 60px;
-  max-width: 1100px;
-  margin: auto;
-
-  animation: sectionFade 0.8s ease-out both;
-}
-
-.section p {
   font-size: 18px;
   margin: 20px 0;
 }
@@ -198,36 +156,23 @@ h3 {
 }
 
 /* =========================================================
+   GENERAL SECTION SYSTEM
+========================================================= */
+
+.section {
+  padding: 120px 60px;
+  max-width: 1100px;
+  margin: auto;
+
+  animation: sectionFade 0.8s ease-out both;
+}
+
+/* =========================================================
    AUDIENCE SECTION
 ========================================================= */
 
 .audience {
   padding: 6rem 0;
-}
-
-.section-header {
-  max-width: 700px;
-  margin-bottom: 3rem;
-}
-
-.eyebrow {
-  color: #c86d2f;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
-}
-
-.section-header h2 {
-  margin-bottom: 1rem;
-  line-height: 1.8;
-}
-
-.section-intro {
-  max-width: 620px;
-  color: #6b6b66;
-  font-size: 1.1rem;
 }
 
 .audience-grid {
@@ -271,14 +216,8 @@ h3 {
   align-items: flex-start;
 }
 
-.step span {
-  color: #6b6b66;
-  font-weight: 600;
-  min-width: 40px;
-}
-
 /* =========================================================
-   PRICING SECTION
+   PRICING SECTION (CLEAN — NO HOVER)
 ========================================================= */
 
 .pricing-grid {
@@ -294,17 +233,21 @@ h3 {
   border: 1px solid #e7e5df;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 
+  /* subtle refinement only */
   transition:
-    transform 0.25s ease,
+    border-color 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-.price:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+/* NO hover effect intentionally */
+
+/* accessibility focus */
+.price:focus-within {
+  border-color: #c86d2f;
+  box-shadow: 0 0 0 3px rgba(200, 109, 47, 0.15);
 }
 
-/* Featured pricing card */
+/* featured card */
 .featured {
   background: #2f3a34;
   color: white;
@@ -360,7 +303,7 @@ footer {
 }
 
 /* =========================================================
-   SMOOTHER INVESTMENT HOVER SYSTEM
+   INVESTMENT SECTION (SMOOTH + CONTROLLED)
 ========================================================= */
 
 .investment-card {
@@ -369,7 +312,6 @@ footer {
   border-radius: 12px;
   padding: 24px;
 
-  /* smoother easing curve (key upgrade) */
   transition:
     transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
@@ -378,22 +320,17 @@ footer {
   will-change: transform;
 }
 
-/* softer hover lift (less aggressive, more floaty) */
 .investment-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.1);
   border-color: #d6d3cc;
 }
 
-/* smoother press state */
 .investment-card:active {
   transform: translateY(-1px) scale(0.995);
 }
 
-/* =========================================================
-   DETAILS OPEN ANIMATION (IMPORTANT FIX)
-========================================================= */
-
+/* details content animation */
 .investment-card .content {
   max-height: 0;
   opacity: 0;
@@ -407,16 +344,11 @@ footer {
     transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* open state */
 .investment-card[open] .content {
   max-height: 700px;
   opacity: 1;
   transform: translateY(0);
 }
-
-/* =========================================================
-   SUMMARY POLISH (SMOOTHER TEXT BEHAVIOR)
-========================================================= */
 
 .investment-card summary {
   list-style: none;
