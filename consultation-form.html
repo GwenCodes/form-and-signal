@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Spotlight Pack — Client Intake</title>
+    <style>
+      :root {
+        --cream: #faf5ec;
+        --terracotta: #c1622d;
+        --terracotta-dark: #a34e20;
+        --brown: #3d2b1f;
+        --brown-soft: #6b5645;
+        --gold: #d4a574;
+        --line: #e5d9c7;
+        --error: #b3261e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--brown);
+        font-family: "Georgia", "Iowan Old Style", serif;
+        line-height: 1.5;
+      }
+
+      .wrap {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 48px 24px 80px;
+      }
+
+      header {
+        margin-bottom: 40px;
+        border-bottom: 3px solid var(--terracotta);
+        padding-bottom: 24px;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 12px;
+        color: var(--terracotta-dark);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin: 0 0 12px;
+        line-height: 1.2;
+      }
+
+      header p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: var(--brown-soft);
+        margin: 0;
+        max-width: 54ch;
+      }
+
+      .section {
+        margin-bottom: 36px;
+      }
+
+      .section-title {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--terracotta-dark);
+        margin-bottom: 4px;
+      }
+
+      .section-sub {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        color: var(--brown-soft);
+        margin-bottom: 18px;
+      }
+
+      .field {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 6px;
+      }
+
+      label .req {
+        color: var(--terracotta);
+      }
+      label .opt {
+        font-weight: 400;
+        color: var(--brown-soft);
+        font-size: 12px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 11px 12px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        background: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: var(--brown);
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: 2px solid var(--gold);
+        outline-offset: 1px;
+        border-color: var(--terracotta);
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 90px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .checkbox-group,
+      .radio-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .check-item,
+      .radio-item {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 8px 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+
+      .check-item input,
+      .radio-item input {
+        width: auto;
+        accent-color: var(--terracotta);
+      }
+
+      .upload-box {
+        border: 2px dashed var(--gold);
+        border-radius: 6px;
+        padding: 20px;
+        text-align: center;
+        background: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .upload-box input[type="file"] {
+        margin-top: 10px;
+        font-size: 13px;
+        width: 100%;
+      }
+
+      .upload-note {
+        font-size: 12px;
+        color: var(--brown-soft);
+        margin-top: 6px;
+      }
+
+      .photo-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px dashed var(--line);
+      }
+
+      .photo-row:last-child {
+        border-bottom: none;
+      }
+
+      .photo-label {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        color: var(--terracotta-dark);
+        grid-column: 1 / -1;
+      }
+
+      button[type="submit"] {
+        background: var(--terracotta);
+        color: #fff;
+        border: none;
+        padding: 16px 32px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button[type="submit"]:hover {
+        background: var(--terracotta-dark);
+      }
+
+      .honeypot {
+        display: none;
+      }
+
+      .no-margin {
+        margin-bottom: 0;
+      }
+
+      .field-spaced {
+        margin-top: 16px;
+      }
+
+      .fine-print {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        color: var(--brown-soft);
+        text-align: center;
+        margin-top: 14px;
+      }
+
+      @media (max-width: 520px) {
+        .grid-2,
+        .photo-row {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 26px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="eyebrow">Project Spotlight Pack — Client Intake</div>
+        <h1>Send us five photos. We'll send back sixteen posts.</h1>
+        <p>
+          Fill this out once and we handle the rest. Everything below is what we
+          need to turn your project photos into ready-to-post captions across
+          your channels. Should take about 10 minutes.
+        </p>
+      </header>
+
+      <form
+        name="spotlight-intake"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        enctype="multipart/form-data"
+      >
+        <input type="hidden" name="form-name" value="spotlight-intake" />
+        <p class="honeypot">
+          <label>Don't fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <!-- CONTACT INFO -->
+        <div class="section">
+          <div class="section-title">Your Info</div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="name">Full Name <span class="req">*</span></label>
+              <input type="text" id="name" name="Full Name" required />
+            </div>
+            <div class="field">
+              <label for="business"
+                >Business Name <span class="req">*</span></label
+              >
+              <input type="text" id="business" name="Business Name" required />
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="Email" required />
+            </div>
+            <div class="field">
+              <label for="phone"
+                >Phone <span class="opt">(optional)</span></label
+              >
+              <input type="tel" id="phone" name="Phone" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="trade"
+              >Trade / Specialty <span class="req">*</span></label
+            >
+            <select id="trade" name="Trade" required>
+              <option value="">Select one</option>
+              <option>General Contractor</option>
+              <option>Kitchen & Bath Remodeler</option>
+              <option>Interior Designer</option>
+              <option>Architect</option>
+              <option>Landscape / Outdoor</option>
+              <option>Electrician</option>
+              <option>Plumber</option>
+              <option>Painter</option>
+              <option>Flooring</option>
+              <option>Roofing</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- PROJECT DETAILS -->
+        <div class="section">
+          <div class="section-title">The Project</div>
+          <div class="section-sub">
+            Tell us about the job in the photos. Basic facts, no need for
+            polish.
+          </div>
+
+          <div class="field">
+            <label for="project-name"
+              >Project Name or Location <span class="req">*</span></label
+            >
+            <input
+              type="text"
+              id="project-name"
+              name="Project Name"
+              placeholder="e.g. Maplewood Kitchen Remodel"
+              required
+            />
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="project-type"
+                >Project Type <span class="req">*</span></label
+              >
+              <input
+                type="text"
+                id="project-type"
+                name="Project Type"
+                placeholder="e.g. Full kitchen gut renovation"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="timeline"
+                >Project Timeline <span class="opt">(optional)</span></label
+              >
+              <input
+                type="text"
+                id="timeline"
+                name="Timeline"
+                placeholder="e.g. 6 weeks, finished June 2026"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="highlights"
+              >What made this project stand out?
+              <span class="req">*</span></label
+            >
+            <textarea
+              id="highlights"
+              name="Highlights"
+              placeholder="Tricky problem you solved, a material or design choice you're proud of, before/after contrast, client reaction, anything worth bragging about."
+              required
+            ></textarea>
+          </div>
+
+          <div class="field">
+            <label for="details"
+              >Any specific details to include?
+              <span class="opt">(optional)</span></label
+            >
+            <textarea
+              id="details"
+              name="Specific Details"
+              placeholder="Materials, brands, square footage, budget range, permits, timeline surprises, anything you want mentioned or want us to avoid mentioning."
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- PHOTOS -->
+        <div class="section">
+          <div class="section-title">Photos <span class="req">*</span></div>
+          <div class="section-sub">
+            Upload up to 5 photos. High resolution, well-lit, no watermarks or
+            stock overlays. Mix of wide shots and details works best.
+          </div>
+
+          <div class="upload-box">
+            <label for="photos" class="no-margin"
+              >Select up to 5 image files</label
+            >
+            <input
+              type="file"
+              id="photos"
+              name="Project Photos"
+              accept="image/*"
+              multiple
+              required
+            />
+            <div class="upload-note">
+              JPG or PNG, under 10MB each. If your files are too large to
+              attach, share a Google Drive or Dropbox link in the field below
+              instead.
+            </div>
+          </div>
+
+          <div class="field field-spaced">
+            <label for="photo-link"
+              >Or paste a link to your photos
+              <span class="opt">(optional)</span></label
+            >
+            <input
+              type="text"
+              id="photo-link"
+              name="Photo Link"
+              placeholder="Google Drive, Dropbox, or gallery URL"
+            />
+          </div>
+
+          <div class="field field-spaced">
+            <label for="photo-captions"
+              >Quick notes on each photo
+              <span class="opt">(optional but helpful)</span></label
+            >
+            <textarea
+              id="photo-captions"
+              name="Photo Notes"
+              placeholder="1. Before shot of the old kitchen&#10;2. Demo day&#10;3. New island installed&#10;4. Finished shot, evening light&#10;5. Client's favorite detail, the hardware"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- VOICE & AUDIENCE -->
+        <div class="section">
+          <div class="section-title">Voice & Audience</div>
+          <div class="section-sub">
+            This is how we make the captions sound like you, not a template.
+          </div>
+
+          <div class="field">
+            <label
+              >Who are you trying to reach? <span class="req">*</span></label
+            >
+            <div class="checkbox-group">
+              <label class="check-item"
+                ><input type="checkbox" name="Audience" value="Homeowners" />
+                Homeowners</label
+              >
+              <label class="check-item"
+                ><input type="checkbox" name="Audience" value="Realtors" />
+                Realtors</label
+              >
+              <label class="check-item"
+                ><input
+                  type="checkbox"
+                  name="Audience"
+                  value="Property Managers"
+                />
+                Property Managers</label
+              >
+              <label class="check-item"
+                ><input
+                  type="checkbox"
+                  name="Audience"
+                  value="Other Contractors"
+                />
+                Other Contractors</label
+              >
+              <label class="check-item"
+                ><input
+                  type="checkbox"
+                  name="Audience"
+                  value="High-end / Luxury Clients"
+                />
+                Luxury Clients</label
+              >
+            </div>
+          </div>
+
+          <div class="field">
+            <label
+              >How should the tone come across?
+              <span class="req">*</span></label
+            >
+            <div class="radio-group">
+              <label class="radio-item"
+                ><input
+                  type="radio"
+                  name="Tone"
+                  value="Straightforward and no-nonsense"
+                  required
+                />
+                Straightforward, no-nonsense</label
+              >
+              <label class="radio-item"
+                ><input type="radio" name="Tone" value="Warm and personable" />
+                Warm and personable</label
+              >
+              <label class="radio-item"
+                ><input type="radio" name="Tone" value="Upscale and polished" />
+                Upscale and polished</label
+              >
+              <label class="radio-item"
+                ><input type="radio" name="Tone" value="Bold and confident" />
+                Bold and confident</label
+              >
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Where will these posts go? <span class="req">*</span></label>
+            <div class="checkbox-group">
+              <label class="check-item"
+                ><input type="checkbox" name="Platforms" value="Instagram" />
+                Instagram</label
+              >
+              <label class="check-item"
+                ><input type="checkbox" name="Platforms" value="Facebook" />
+                Facebook</label
+              >
+              <label class="check-item"
+                ><input type="checkbox" name="Platforms" value="LinkedIn" />
+                LinkedIn</label
+              >
+              <label class="check-item"
+                ><input type="checkbox" name="Platforms" value="TikTok" />
+                TikTok</label
+              >
+              <label class="check-item"
+                ><input
+                  type="checkbox"
+                  name="Platforms"
+                  value="Google Business Profile"
+                />
+                Google Business Profile</label
+              >
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="cta"
+              >Preferred call to action
+              <span class="opt">(optional)</span></label
+            >
+            <input
+              type="text"
+              id="cta"
+              name="Call to Action"
+              placeholder="e.g. 'DM us for a free estimate' or 'Link in bio to book a consult'"
+            />
+          </div>
+        </div>
+
+        <!-- LOGISTICS -->
+        <div class="section">
+          <div class="section-title">Logistics</div>
+          <div class="grid-2">
+            <div class="field">
+              <label for="deadline"
+                >Needed by <span class="opt">(optional)</span></label
+              >
+              <input type="date" id="deadline" name="Needed By" />
+            </div>
+            <div class="field">
+              <label for="handle"
+                >Social handle(s) <span class="opt">(optional)</span></label
+              >
+              <input
+                type="text"
+                id="handle"
+                name="Social Handles"
+                placeholder="@yourbusiness"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label for="anything-else"
+              >Anything else we should know?
+              <span class="opt">(optional)</span></label
+            >
+            <textarea
+              id="anything-else"
+              name="Additional Notes"
+              placeholder="Competitors to avoid sounding like, past posts that performed well, words you never want used, etc."
+            ></textarea>
+          </div>
+        </div>
+
+        <button type="submit">Submit Project Details</button>
+        <div class="fine-print">
+          You'll get your 16 posts within 3 business days of submission.
+          Questions? Reply to your confirmation email.
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
